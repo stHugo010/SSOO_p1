@@ -1,3 +1,5 @@
+//Hugo Sanchez Torres
+//Miguel Pradillo Bartolome
 //implementar librerias
 #include "libreria.h"
 #include <stdio.h>
@@ -87,8 +89,11 @@ int longlines(int N) {
     int lc = 0;
 
     while (fgets(linea, 1024, stdin)) {
+        //Aumentamos memoria del array
         arr = realloc(arr, (lc + 1) * sizeof(char*)); 
+        //Asignamos memoria
         arr[lc] = malloc(strlen(linea) + 1);
+        //Copiamos linea
         strcpy(arr[lc], linea);
         lc++; // Incrementamos el contador de líneas.
     }
