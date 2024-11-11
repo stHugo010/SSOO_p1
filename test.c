@@ -8,7 +8,7 @@
 //funcion principal
 int main(int argc, char *argv[]){
   int numLineas = 10;         //numero de lineas por defecto              
-  char *funcion = argv[1];    //variable que guarda la funcion 
+  char *nombreFuncion = argv[1];    //variable que guarda la funcion 
   
   //comprobar que el numero de argumentos es valido
   if(argc < 1 || argc > 3){
@@ -21,13 +21,13 @@ int main(int argc, char *argv[]){
     numLineas = atoi(argv[2]);
   }
   //llamadas a las funciones correspondientes
-  if (strcmp(funcion, "-head") == 0){
+  if (strcmp(nombreFuncion, "-head") == 0){
     head(numLineas);
     return 0;
-  } else if (strcmp(funcion, "-tail") == 0){
+  } else if (strcmp(nombreFuncion, "-tail") == 0){
     tail(numLineas);
     return 0;
-  } else if (strcmp(funcion, "-longLines") == 0){
+  } else if (strcmp(nombreFuncion, "-longLines") == 0){
     longlines(numLineas);
     return 0;
   } else{
